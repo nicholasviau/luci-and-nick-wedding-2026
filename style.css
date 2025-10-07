@@ -1,0 +1,315 @@
+/* Root variables for theme */
+:root {
+  --color-primary: #4b668c;
+  --color-secondary: #8c4c64;
+  --color-accent: #ffefae;
+  --color-bg: #FAF9F6;
+  --font-header: 'Lexend', sans-serif;
+  --font-body: 'Lexend', serif;
+  --text-color: #333;
+  --border-color: rgba(0, 0, 0, 0.06);
+  --padding: 1.5rem;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 95%;
+  background: var(--color-bg);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-size: 18px;
+  font-weight: 370;
+  scroll-behavior: smooth;
+}
+
+/* add spacing between paragraphs—but not after the last one */
+p:not(:last-child) {
+  margin-bottom: 1rem;
+  /* adjust to taste */
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-header);
+  color: var(--color-secondary);
+  margin: 1em 0 0.5em;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  margin-top: 0rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+table td {
+  padding: 0.5rem 0;
+}
+
+table td:first-child {
+  color: var(--color-primary);
+  font-weight: 600;
+  width: 7rem;
+}
+
+table td:nth-child(-n+2) {
+  font-family: 'Lexend', sans-serif;
+}
+
+button {
+  display: inline-block;
+  background: var(--color-secondary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-family: var(--font-header);
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: var(--font-body);
+}
+
+.neighborhoods {
+  list-style-type: disc;
+  /* default bullet style */
+  margin-left: 1.5rem;
+  /* indent bullets */
+  padding-left: 2rem;
+}
+
+.neighborhoods .location-name {
+  color: black;
+  /* force neighborhood names to black */
+  font-weight: 500;
+  /* optional, to make them stand out */
+}
+
+.neighborhoods li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* Layout similar to inspiration */
+.collapse-on-mobile {
+  display: flex;
+}
+
+.slides {
+  width: 45vw;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  border-right: 1px solid var(--border-color);
+}
+
+/* .main-carousel {
+  height: 100%;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-cell img {
+  max-width: calc(45vw - var(--padding)*2);
+  max-height: calc(100vh - 120px);
+  border-radius: 12px;
+  object-fit: cover;
+}
+*/ 
+.slide-caption {
+  text-align: center;
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.main {
+  width: 55vw;
+  padding: var(--padding);
+  overflow-x: hidden;
+}
+
+.navigation {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: .5rem;
+}
+
+.navigation a {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: var(--color-secondary);
+  font-family: var(--font-header);
+  font-size: 0.9rem;
+}
+
+.navigation a.active {
+  background: var(--color-secondary);
+  color: white;
+}
+
+/* Countdown timer */
+.countdown {
+  display: flex;
+  gap: 1rem;
+  font-family: var(--font-header);
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.countdown span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown span small {
+  font-size: 0.75rem;
+  color: var(--text-color);
+}
+
+/* RSVP form */
+.rsvp-form {
+  margin-top: 1rem;
+}
+
+.rsvp-form label {
+  display: block;
+  margin-top: 1rem;
+  font-family: var(--font-header);
+  color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .collapse-on-mobile {
+    flex-direction: column;
+  }
+
+  .slides {
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .main {
+    width: 100vw;
+  }
+}
+
+
+/* --- Static‑image version of the left column --- */
+.static-image-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* lets caption sit under the picture */
+  align-items: center;
+  /* horizontal centering */
+  justify-content: center;
+  /* vertical centering */
+  padding: var(--padding);
+}
+
+.static-image-wrapper img {
+  max-width: calc(45vw - var(--padding)*2);
+  max-height: calc(100vh - 120px);
+  /* mirrors the old carousel sizing */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+/* --- Fix for carousel images being clipped --- */
+
+/* 1) Make carousel + viewport fill the .slides container */
+.main-carousel,
+.flickity-viewport {
+  height: 100% !important;
+}
+
+/* 2) Let each cell also fill that height */
+.carousel-cell {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 3) Constrain the <img> so it never exceeds its cell’s bounds */
+.carousel-cell img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;           /* center horizontally & vertically */
+  object-fit: contain;     /* scale whole image into view */
+}
+
