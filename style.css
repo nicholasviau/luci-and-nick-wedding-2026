@@ -268,14 +268,17 @@ textarea {
     width: 100vw;
   }
 
+  .static-image-wrapper {
+    padding: 0;
+  }
+
   .static-image-wrapper img {
     width: 100%;
     height: auto;
     max-width: none;
     max-height: none;
-    object-fit: contain;
-    border-radius: 12px;
-    /* Restore border radius if desired, or keep 0 */
+    object-fit: cover;
+    border-radius: 0;
   }
 }
 
