@@ -1,4 +1,7 @@
-/* Root variables for theme */
+.mobile-image-section {
+  display: none;
+}
+
 :root {
   --color-primary: #4b668c;
   --color-secondary: #8c4c64;
@@ -178,7 +181,7 @@ textarea {
   border-radius: 12px;
   object-fit: cover;
 }
-*/ 
+*/
 .slide-caption {
   text-align: center;
   display: block;
@@ -253,7 +256,7 @@ textarea {
     flex-direction: column;
   }
 
- .slides {
+  .slides {
     width: 100vw;
     height: auto;
     position: relative;
@@ -319,7 +322,8 @@ textarea {
   display: block;
   max-width: 100%;
   max-height: 100%;
-  margin: auto;           /* center horizontally & vertically */
-  object-fit: contain;     /* scale whole image into view */
+  margin: auto;
+  /* center horizontally & vertically */
+  object-fit: contain;
+  /* scale whole image into view */
 }
-
