@@ -252,33 +252,30 @@ textarea {
 
 /* Responsive */
 @media (max-width: 900px) {
-  /* Let the page and hero image actually use the full screen width */
-  html,
-  body {
-    width: 100%;
+  .collapse-on-mobile {
+    flex-direction: column;
   }
 
   .slides {
-    width: 100%;      /* Full width on mobile */
+    width: 100vw;
     height: auto;
     position: relative;
     border-right: none;
     border-bottom: 1px solid var(--border-color);
   }
 
-  /* Remove side padding so the image can touch the edges */
-  .static-image-wrapper {
-    padding: 0;
+  .main {
+    width: 100vw;
   }
 
   .static-image-wrapper img {
-    display: block;
-    width: 100%;      /* Fill container horizontally */
-    height: auto;     /* Keep aspect ratio */
+    width: 100%;
+    height: auto;
     max-width: none;
     max-height: none;
-    object-fit: contain; /* or 'cover' if you prefer a cropped hero look */
-    border-radius: 0;    /* optional – makes it truly edge-to-edge */
+    object-fit: contain;
+    border-radius: 12px;
+    /* Restore border radius if desired, or keep 0 */
   }
 }
 
