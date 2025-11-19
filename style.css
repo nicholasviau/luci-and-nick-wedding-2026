@@ -264,6 +264,11 @@ textarea {
   .main {
     width: 100vw;
   }
+
+    .static-image-wrapper img {
+    max-width: calc(100vw - var(--padding)*2);
+    max-height: calc(50vh - var(--padding)*2);
+  }
 }
 
 
