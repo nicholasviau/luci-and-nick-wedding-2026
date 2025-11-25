@@ -23,7 +23,7 @@
 
 html,
 body {
-  width: 95%;
+  width: 100%;
   background: var(--color-bg);
   color: var(--text-color);
   font-family: var(--font-body);
@@ -270,11 +270,11 @@ textarea {
 
   .static-image-wrapper img {
     width: 100%;
-    height: 800px;
+    height: 100%;
     max-width: none;
     max-height: none;
     object-fit: none;
-    border-radius: 12px;
+    border-radius: 0px;
     /* Restore border radius if desired, or keep 0 */
   }
 }

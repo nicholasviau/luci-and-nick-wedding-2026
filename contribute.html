@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Widgets</title>
+
+  <!-- Google Fonts (same as main site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Your existing theme -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Extra styles just for this page -->
+  <style>
+    /* Full-page center layout */
+    .widget-page {
+      min-height: 100vh;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-accent);
+      font-family: var(--font-body);
+      color: var(--text-color);
+      padding: 2rem 1rem;
+      box-sizing: border-box;
+    }
+
+    /* The 1000px box */
+    .widget-box {
+      width: 100%;
+      max-width: 720px;
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+      box-sizing: border-box;
+    }
+
+    .widget-box h1 {
+      font-family: var(--font-header);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      color: var(--color-primary);
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .container {
+      min-height: 100vh;
+      /* minimum height = screen height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* On small screens, keep it full width with comfy padding */
+    @media (max-width: 768px) {
+      .widget-page {
+        padding: 1.5rem 1rem;
+      }
+
+      .widget-box {
+        border-radius: 12px;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="widget-page">
+    <div class="widget-box">
+      <h1>Contributions</h1>
+      <p>For those who would like to contribute digitally, we ask you that you use <strong>Zelle</strong>. Again, We
+        thank you for your generosity and thoughtfulness.</p>
+      <p>
+      <div class="static-image-wrapper">
+        <img src="imgs/luci-zelle.png" width=40%>
+
+      </div>
+    </div>
+</body>
+
+</div>
+
+</html>
