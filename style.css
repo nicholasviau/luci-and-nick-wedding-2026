@@ -62,12 +62,22 @@ h2 {
 h3 {
   font-size: 1.5rem;
   color: var(--color-primary);
+  border-bottom:1px solid #ababab;
+  padding-bottom:3px;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 500;
   margin-bottom: 0.25rem;
+}
+
+h5 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #555555;
+  font-style: italic;
 }
 
 a {
